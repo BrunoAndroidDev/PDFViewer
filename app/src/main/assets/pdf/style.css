@@ -1,0 +1,59 @@
+body {
+    text-align:center;
+    background:grey;
+}
+
+.page {
+     width:90%;
+     margin:10px auto;
+     background:  url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+ }
+
+.container {
+    margin:auto;
+    width:90%;
+}
+
+img {
+    max-width:100%;
+}
+
+/*-------------------------------
+ IMAGES
+********************************/
+.page {
+    margin:10px;
+}
+
+.wrapper {
+	float:left;
+	height: 0;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+.loading {
+	background: #1E1E1E url('http://dinbror.dk/blazy/assets/loader.gif') center center no-repeat;
+}
+img {
+	width:100%;
+	opacity:0;
+	padding:2px 2px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: opacity 500ms ease-in-out 100ms;
+    -moz-transition: opacity 500ms ease-in-out 100ms;
+    -o-transition: opacity 500ms ease-in-out 100ms;
+    transition: opacity 500ms ease-in-out 100ms;
+}
+
+img.b-loaded {
+	opacity:1;
+	width:auto;
+}
+
+.ratio_big-img {
+	padding-bottom:56.7%;
+}

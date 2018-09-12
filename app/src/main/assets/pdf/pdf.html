@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style type="text/css">
+        body {
+        text-align:center;
+        background:grey;
+        margin:0;
+        }
+
+        .container {
+        width:90%;
+        margin:auto;
+        }
+
+        img {
+        max-width:100%;
+        }
+
+        .wrapper {
+        margin:10px 0px;
+        float:left;
+        width:100%;
+        }
+
+        .loading {
+        background: #FFFFFF url('progress.gif') center center no-repeat;
+        }
+
+        img {
+        width:100%;
+        opacity:0;
+        padding:2px 2px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: opacity 500ms ease-in-out 100ms;
+        -moz-transition: opacity 500ms ease-in-out 100ms;
+        -o-transition: opacity 500ms ease-in-out 100ms;
+        transition: opacity 500ms ease-in-out 100ms;
+        }
+
+        img.b-loaded {
+        opacity:1;
+        width:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    {CONTENT}
+</div>
+<script src="blazy.min.js"></script>
+<script>
+(function() {
+		var bLazy = new Blazy({
+		   success: function(element){
+				setTimeout(function(){
+					var parent = element.parentNode;
+					parent.className = parent.className.replace(/\bloading\b/,'');
+				}, 200);
+			}
+		});
+	})();
+
+
+
+
+</script>
+</body>
+</html>
